@@ -15,13 +15,9 @@
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-}
-.categories ul{
-    display: flex;
     gap: 2rem;
 }
-.categories li{
-    list-style: none;
+.categories span{
     color: #c59d5f;
     cursor: pointer;
 }
