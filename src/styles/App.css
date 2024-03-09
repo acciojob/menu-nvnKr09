@@ -17,7 +17,9 @@
     justify-content: center;
     gap: 2rem;
 }
-.categories span{
+.categories button{
+    border: none;
+    background: transparent;
     color: #c59d5f;
     cursor: pointer;
 }
