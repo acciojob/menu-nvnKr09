@@ -79,26 +79,25 @@ const fullData = [
 const App = () => {
   const [data, setData] = useState(fullData);
 
-  function filterData(category){
-    if(category === "All"){
+  function filterData(category) {
+    if (category === "All") {
       setData(fullData);
     } else {
-      setData(fullData.filter(item => item.category === category.toLowerCase()));
+      setData(fullData.filter((item) => item.category === category));
     }
   }
 
   return (
-    <div className="App">
+    <div id="main" className="App">
       <div className="top">
         <h1>Our Menu</h1>
         <div className="bottom-line"></div>
       </div>
       <div className="categories">
-        {["All", "Breakfast", "Lunch", "Shakes"].map((category, idx) => (
-          <span key={idx} onClick={() => filterData(category)}>
-            {category}
-          </span>
-        ))}
+        <span id="filter-btn-1" onClick={() => filterData("All")}>All</span>
+        <span id="filter-btn-2" onClick={() => filterData("breakfast")}>Breakfast</span>
+        <span id="filter-btn-3" onClick={() => filterData("lunch")}>Lunch</span>
+        <span id="filter-btn-4" onClick={() => filterData("shakes")}>Shakes</span>
       </div>
       <div className="menu-container">
         {data.map((item) => (
@@ -107,11 +106,9 @@ const App = () => {
             <div className="details">
               <div className="name-price">
                 <h3 className="title">{item.title}</h3>
-                <h3 className="price">${" "}{item.price}</h3>
+                <h3 className="price">$ {item.price}</h3>
               </div>
-              <p className="description">
-                {item.desc}
-              </p>
+              <p className="description">{item.desc}</p>
             </div>
           </div>
         ))}
