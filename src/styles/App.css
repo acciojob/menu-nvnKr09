@@ -15,11 +15,13 @@
     margin-top: 2rem;
     display: flex;
     justify-content: center;
+}
+.categories ul{
+    display: flex;
     gap: 2rem;
 }
-.categories button{
-    border: none;
-    background: transparent;
+.categories li{
+    list-style: none;
     color: #c59d5f;
     cursor: pointer;
 }

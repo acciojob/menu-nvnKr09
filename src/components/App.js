@@ -94,10 +94,12 @@ const App = () => {
         <div className="bottom-line"></div>
       </div>
       <div className="categories">
-        <button id="filter-btn-1" data-test-id="menu-item-all" onClick={() => filterData("All")}>All</button>
-        <button id="filter-btn-2" data-test-id="menu-item-breakfast" onClick={() => filterData("breakfast")}>Breakfast</button>
-        <button id="filter-btn-3" data-test-id="menu-item-lunch" onClick={() => filterData("lunch")}>Lunch</button>
-        <button id="filter-btn-4" data-test-id="menu-item-shakes" onClick={() => filterData("shakes")}>Shakes</button>
+        <ul>
+        <li id="filter-btn-1" data-test-id="menu-item-all" onClick={() => filterData("All")}>All</li>
+        <li id="filter-btn-2" data-test-id="menu-item-breakfast" onClick={() => filterData("breakfast")}>Breakfast</li>
+        <li id="filter-btn-3" data-test-id="menu-item-lunch" onClick={() => filterData("lunch")}>Lunch</li>
+        <li id="filter-btn-4" data-test-id="menu-item-shakes" onClick={() => filterData("shakes")}>Shakes</li>
+        </ul>
       </div>
       <div className="menu-container">
         {data.map((item) => (
